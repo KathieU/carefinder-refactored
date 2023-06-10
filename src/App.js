@@ -5,6 +5,7 @@ import HospitalList from "./components/HospitalList";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Navbar from "./components/Navbar";
+import AddHospital from "./components/AddHospital";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/location/:id" element={<HospitalList />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login/add-hospital" element={<AddHospital />} />
         </Routes>
       </div>
     </Router>
