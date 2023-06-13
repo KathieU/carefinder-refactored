@@ -21,18 +21,20 @@ function Login() {
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <div>
-          <label>Email:</label>
+          <label htmlFor="emailInput">Email:</label>
           <input
             type="email"
+            id="emailInput"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label htmlFor="passwordInput">Password:</label>
           <input
             type="password"
+            id="passwordInput"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required

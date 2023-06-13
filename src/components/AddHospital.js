@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { firestore } from "../firebase";
 import ReactMarkdown from "react-markdown";
-// import { Editor } from "react-markdown-editor-lite";
+import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
-// import Editor from "react-markdown-editor-lite/dist/index.js";
-import Editor from "react-markdown-editor-lite/cjs/editor/index.js";
 
 function AddHospital() {
   const [locations, setLocations] = useState([]);
