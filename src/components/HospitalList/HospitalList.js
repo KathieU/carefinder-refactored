@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { firestore } from "../../firebase";
 import { CSVLink } from "react-csv";
+import styles from "./hospital.module.css";
 
 function HospitalList() {
   const [hospitals, setHospitals] = useState([]);
@@ -32,21 +33,22 @@ function HospitalList() {
 
   const csvHeaders = [
     { label: "Name", key: "name" },
-    { label: "Location", key: "location" },
     { label: "Address", key: "address" },
+    { label: "Phone", key: "phone" },
+    { label: "Email", key: "email" },
   ];
 
   const csvData = hospitals.map((hospital) => ({
     name: hospital.name,
-    location: hospital.location,
     address: hospital.address,
+    phone: hospital.phone,
   }));
 
   const handleEmailShare = () => {
     const emailBody = `Here is the list of hospitals:\n\n${hospitals
       .map(
         (hospital) =>
-          `${hospital.name} - ${hospital.location} - ${hospital.address}`
+          `${hospital.name} - ${hospital.address} - ${hospital.phone} - ${hospital.email}`
       )
       .join("\n")}`;
 
@@ -56,23 +58,28 @@ function HospitalList() {
   };
 
   return (
-    <div>
-      <h1>Hospitals in Location</h1>
-      <ul>
+    <div className={styles.hospital}>
+      <h2>Hospitals near you</h2>
+
+      <ul className={styles.cardList}>
         {hospitals.map((hospital) => (
-          <li key={hospital.id}>
+          <li key={hospital.id} className={styles.cardItem}>
             <strong>{hospital.name}</strong>
             <br />
-            Location: {hospital.location}
-            <br />
             Address: {hospital.address}
+            <br />
+            Phone: {hospital.phone}
+            <br />
+            Email: {hospital.email}
           </li>
         ))}
       </ul>
       <button onClick={handleEmailShare}>Share via Email</button>
-      <CSVLink data={csvData} headers={csvHeaders}>
-        Export to CSV
-      </CSVLink>
+      <button>
+        <CSVLink data={csvData} headers={csvHeaders} className={styles.csv}>
+          Export to CSV
+        </CSVLink>
+      </button>
     </div>
   );
 }

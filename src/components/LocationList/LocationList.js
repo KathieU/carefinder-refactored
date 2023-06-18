@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
+import styles from "./location.module.css";
 
 function LocationList() {
   const [locations, setLocations] = useState([]);
@@ -31,17 +32,17 @@ function LocationList() {
   };
 
   return (
-    <div>
-      <h1>List of Locations</h1>
+    <div className={styles.location}>
+      <h2>Select your location</h2>
       <input
         type="text"
         value={searchTerm}
         onChange={handleSearchChange}
         placeholder="Search by location..."
       />
-      <ul>
+      <ul className={styles.cardList}>
         {locations.map((location) => (
-          <li key={location.id}>
+          <li key={location.id} className={styles.cardItem}>
             <Link to={`/location/${location.id}`}>{location.name}</Link>
           </li>
         ))}
