@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { auth, googleAuthProvider } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import styles from "./signup.module.css";
+import googleIcon from "./googleIcon.jpg";
 
 function Signup() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -52,31 +55,60 @@ function Signup() {
   };
 
   return (
-    <div>
-      <h1>Signup</h1>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSignup}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+    <div className={styles.signup}>
+      <div className={styles.signup1}>
+        <h2>CareFinder</h2>
+        <h3>Join Our Community</h3>
+        <p>Enjoy seamless access to medical services.</p>
+        <div className={styles.image}></div>
+      </div>
+      <div className={styles.signup2}>
+        <div className={styles.signupForm}>
+          <h1>Create An Account</h1>
+
+          <form onSubmit={handleSignup}>
+            <div className={styles.name}>
+              <label>Name</label>
+              <br />
+              <input
+                placeholder="Enter Name"
+                type="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className={styles.email}>
+              <label>Email Address</label>
+              <br />
+              <input
+                placeholder="Enter Email Address"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className={styles.password}>
+              <label>Password</label>
+              <br />
+              <input
+                placeholder="Enter Password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            {error && <span>{error}</span>}
+            <button type="submit">Create Account</button>
+          </form>
+          <p>OR</p>
+          <button onClick={handleGoogleSignup}>
+            <img src={googleIcon} alt="google icon" />
+          </button>
         </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Signup</button>
-      </form>
-      <button onClick={handleGoogleSignup}>Signup with Google</button>
+      </div>
     </div>
   );
 }
