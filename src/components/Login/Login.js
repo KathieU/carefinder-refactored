@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { auth } from "../../firebase";
 import { Link } from "react-router-dom";
+import styles from "./login.module.css";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -13,37 +15,54 @@ function Login() {
       // Handle successful login, e.g., redirect to a different page
     } catch (error) {
       console.error("Error logging in:", error);
+      setError("Errorlogging in. Please try again.");
     }
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label htmlFor="emailInput">Email:</label>
-          <input
-            type="email"
-            id="emailInput"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+    <div className={styles.signup}>
+      <div className={styles.signup1}>
+        <h2>CareFinder</h2>
+        <h3>Join Our Community</h3>
+        <p>Enjoy seamless access to medical services.</p>
+        <div className={styles.image}></div>
+      </div>
+      <div className={styles.signup2}>
+        <div className={styles.signupForm}>
+          <h2>Welcome Back!</h2>
+          <p>Login using correct details</p>
+          <form onSubmit={handleLogin}>
+            <div className={styles.email}>
+              <label htmlFor="emailInput">Email Address</label>
+              <input
+                placeholder="Enter Email Address"
+                type="email"
+                id="emailInput"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className={styles.password}>
+              <label htmlFor="passwordInput">Password</label>
+              <input
+                placeholder="Enter Password"
+                type="password"
+                id="passwordInput"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            {error && <span>{error}</span>}
+            <button type="submit">
+              <Link to="/login/add-hospital" className={styles.linkText}>
+                Login
+              </Link>
+            </button>
+          </form>
         </div>
-        <div>
-          <label htmlFor="passwordInput">Password:</label>
-          <input
-            type="password"
-            id="passwordInput"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">
-          <Link to="/login/add-hospital">Login</Link>
-        </button>
-      </form>
+      </div>
     </div>
   );
 }
