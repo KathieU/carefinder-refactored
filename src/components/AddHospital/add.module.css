@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+.add {
+  background: #e0e4ec;
+  margin-top: 4px;
+  height: 80vh;
+  text-align: center;
+}
+
+.add h2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  /* or 60px */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  letter-spacing: -0.011em;
+}
+
+form label {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 150%;
+  /* or 38px */
+
+  text-align: center;
+  letter-spacing: -0.011em;
+
+  color: #000000;
+}
+
+form input {
+  width: 608px;
+  height: 58px;
+  margin-left: 20px;
+  border: none;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.add select {
+  width: 326px;
+  height: 45px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.add button {
+  width: 150px;
+  height: 59px;
+  color: #ffffff;
+  background: #08299b;
+  border-radius: 12px;
+  border: none;
+  margin-top: 10px;
+  font-weight: 700;
+}

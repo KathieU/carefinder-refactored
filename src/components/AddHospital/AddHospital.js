@@ -3,6 +3,7 @@ import { firestore } from "../../firebase";
 import ReactMarkdown from "react-markdown";
 import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
+import styles from "./add.module.css";
 
 function AddHospital() {
   const [locations, setLocations] = useState([]);
@@ -99,12 +100,12 @@ function AddHospital() {
   };
 
   return (
-    <div>
-      <h1>Add Hospital</h1>
+    <div className={styles.add}>
+      <h2>Add Hospital</h2>
       {successMessage && <p>{successMessage}</p>}
       {errorMessage && <p>{errorMessage}</p>}
       <form onSubmit={handleFormSubmit}>
-        <div>
+        <div className={styles.selectLocation}>
           <label htmlFor="location">Location:</label>
           <select
             id="location"
@@ -119,7 +120,7 @@ function AddHospital() {
             ))}
           </select>
         </div>
-        <div>
+        <div className={styles.selectName}>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -128,7 +129,7 @@ function AddHospital() {
             onChange={handleNameChange}
           />
         </div>
-        <div>
+        <div className={styles.selectAddress}>
           <label htmlFor="address">Address:</label>
           <input
             type="text"
@@ -137,7 +138,7 @@ function AddHospital() {
             onChange={handleAddressChange}
           />
         </div>
-        <div>
+        <div className={styles.selectPhone}>
           <label htmlFor="phone">Phone:</label>
           <input
             type="text"
@@ -146,7 +147,7 @@ function AddHospital() {
             onChange={handlePhoneChange}
           />
         </div>
-        <div>
+        <div className={styles.selectEmail}>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -155,7 +156,7 @@ function AddHospital() {
             onChange={handleEmailChange}
           />
         </div>
-        <div>
+        <div className={styles.description}>
           <label htmlFor="description">Description:</label>
           <Editor
             value={markdownContent}
