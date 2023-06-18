@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { firestore } from "../firebase";
+import { firestore } from "../../firebase";
 import { CSVLink } from "react-csv";
 
 function HospitalList() {

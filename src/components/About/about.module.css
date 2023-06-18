@@ -1,0 +1,66 @@
+/* .about {
+  background: #f5f5f5;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+} */
+
+.about .first {
+  background-image: url(./about1.jpg);
+  position: absolute;
+  width: 388px;
+  height: 702px;
+  left: 1px;
+  top: 111px;
+  border-radius: 20px;
+}
+
+.about .second {
+  background-image: url(./about2.jpg);
+  position: absolute;
+  width: 388px;
+  height: 702px;
+  left: 412px;
+  top: 156px;
+  border-radius: 20px;
+}
+
+.about .third h2 {
+  position: absolute;
+  width: 658px;
+  height: 186px;
+  left: 782px;
+  top: 156px;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 150%;
+  /* or 68px */
+
+  text-align: center;
+  letter-spacing: -0.011em;
+
+  color: #000000;
+}
+
+.about .third p {
+  position: absolute;
+  width: 501px;
+  height: 340px;
+  left: 885px;
+  top: 355px;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 150%;
+  /* or 45px */
+
+  text-align: center;
+  letter-spacing: -0.011em;
+
+  color: #000000;
+}

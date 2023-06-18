@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { firestore } from "../firebase";
+import { firestore } from "../../firebase";
 import ReactMarkdown from "react-markdown";
 import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { auth, googleAuthProvider } from "../firebase";
+import { auth, googleAuthProvider } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {

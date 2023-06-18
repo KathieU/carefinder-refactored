@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { firestore } from "../firebase";
+import { firestore } from "../../firebase";
 
 function LocationList() {
   const [locations, setLocations] = useState([]);
