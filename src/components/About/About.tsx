@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./about.module.css";
 
-function About() {
+function About(): JSX.Element {
   return (
     <div className={styles.about}>
       <div className={styles.first}></div>

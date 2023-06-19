@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { auth, googleAuthProvider } from "../../firebase";
+import { auth } from "../../firebase";
+import { GoogleAuthProvider } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import styles from "./signup.module.css";
 import googleIcon from "./googleIcon.jpg";
 
-function Signup() {
+function Signup(): JSX.Element {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSignup = async (e) => {
+  const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!isFormValid()) {
       return;
@@ -29,7 +30,7 @@ function Signup() {
 
   const handleGoogleSignup = async () => {
     try {
-      await auth.signInWithPopup(new googleAuthProvider());
+      await auth.signInWithPopup(new GoogleAuthProvider());
       // Handle successful signup, e.g., display a success message
       navigate("/login");
     } catch (error) {
@@ -72,7 +73,7 @@ function Signup() {
               <br />
               <input
                 placeholder="Enter Name"
-                type="name"
+                type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required

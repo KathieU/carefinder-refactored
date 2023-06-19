@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
 
-function Footer() {
+function Footer(): JSX.Element {
   return (
     <footer>
       <div className={styles.footer1}>
@@ -14,7 +14,7 @@ function Footer() {
       </div>
       <div className={styles.footer3}>
         <h5>Quick Links</h5>
-        <p>My account </p>
+        <p>My account</p>
         <p>Book an appointment</p>
         <p>Library</p>
       </div>

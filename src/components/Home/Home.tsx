@@ -6,7 +6,7 @@ import exportIcon from "./exportIcon.jpg";
 import shareIcon from "./shareIcon.jpg";
 import Footer from "./Footer";
 
-function Home() {
+function Home(): JSX.Element {
   return (
     <div className={styles.home}>
       <div className={styles.body}>
@@ -36,9 +36,9 @@ function Home() {
           </h2>
 
           <p>
-            Carefinder is a platform where users can search for hosiptals in
-            their areas, export hospital details for your records and enhance
-            your healthcare experience by connecting with others and sharing
+            Carefinder is a platform where users can search for hospitals in
+            their areas, export hospital details for their records, and enhance
+            their healthcare experience by connecting with others and sharing
             valuable resources.
           </p>
           <button>
@@ -46,7 +46,7 @@ function Home() {
           </button>
         </div>
 
-        <div className="styles.services">
+        <div className={styles.services}>
           <div className={styles.doctors}>
             <img src={doctorIcon} alt="doctor icon" />
             <h6>Search Doctors</h6>
@@ -60,7 +60,7 @@ function Home() {
           <div className={styles.export}>
             <img src={exportIcon} alt="export icon" />
             <h6>Export Hospitals</h6>
-            <p>See list of hospitals.</p>
+            <p>See a list of hospitals.</p>
           </div>
           <div className={styles.share}>
             <img src={shareIcon} alt="share icon" />

@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ChangeEvent } from "react";
 import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
 import styles from "./location.module.css";
 
-function LocationList() {
-  const [locations, setLocations] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+interface Location {
+  id: string;
+  name: string;
+}
+
+function LocationList(): JSX.Element {
+  const [locations, setLocations] = useState<Location[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   useEffect(() => {
     const fetchLocations = async () => {
@@ -17,7 +22,7 @@ function LocationList() {
         const locationsData = locationsSnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
-        }));
+        })) as Location[];
         setLocations(locationsData);
       } catch (error) {
         console.error("Error fetching locations:", error);
@@ -27,7 +32,7 @@ function LocationList() {
     fetchLocations();
   }, [searchTerm]);
 
-  const handleSearchChange = (event) => {
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 

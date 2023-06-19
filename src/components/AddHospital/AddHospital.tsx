@@ -5,25 +5,30 @@ import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
 import styles from "./add.module.css";
 
-function AddHospital() {
-  const [locations, setLocations] = useState([]);
-  const [selectedLocation, setSelectedLocation] = useState("");
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [markdownContent, setMarkdownContent] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+interface Location {
+  id: string;
+  name: string;
+}
+
+function AddHospital(): JSX.Element {
+  const [locations, setLocations] = useState<Location[]>([]);
+  const [selectedLocation, setSelectedLocation] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [markdownContent, setMarkdownContent] = useState<string>("");
+  const [successMessage, setSuccessMessage] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   useEffect(() => {
-    const fetchLocations = async () => {
+    const fetchLocations = async (): Promise<void> => {
       try {
         const locationsSnapshot = await firestore.collection("locations").get();
-        const locationsData = locationsSnapshot.docs.map((doc) => ({
+        const locationsData: Location[] = locationsSnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
-        }));
+        })) as Location[];
         setLocations(locationsData);
       } catch (error) {
         console.error("Error fetching locations:", error);
@@ -33,31 +38,31 @@ function AddHospital() {
     fetchLocations();
   }, []);
 
-  const handleLocationChange = (e) => {
+  const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     setSelectedLocation(e.target.value);
   };
 
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setName(e.target.value);
   };
 
-  const handleAddressChange = (e) => {
+  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setAddress(e.target.value);
   };
 
-  const handlePhoneChange = (e) => {
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setPhone(e.target.value);
   };
 
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
   };
 
-  const handleEditorChange = ({ html, text }) => {
+  const handleEditorChange = ({ html, text }: { html: string; text: string }): void => {
     setMarkdownContent(text);
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
     try {
@@ -97,6 +102,10 @@ function AddHospital() {
       setErrorMessage("Failed to add hospital. Please try again.");
       setSuccessMessage("");
     }
+  };
+
+  const renderHTML = (text: string): React.ReactElement => {
+    return <ReactMarkdown>{text}</ReactMarkdown>;
   };
 
   return (
@@ -161,9 +170,10 @@ function AddHospital() {
           <Editor
             value={markdownContent}
             onChange={handleEditorChange}
+            renderHTML={renderHTML}
             style={{ height: "300px" }}
           />
-          <ReactMarkdown source={markdownContent} />
+          <ReactMarkdown>{markdownContent}</ReactMarkdown>
         </div>
         <button type="submit">Add Hospital</button>
       </form>

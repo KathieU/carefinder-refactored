@@ -12,6 +12,7 @@ declare const styles: {
     hospitals: string;
     export: string;
     share: string;
+    services: string;
 };
       
       

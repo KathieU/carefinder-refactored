@@ -4,9 +4,17 @@ import { firestore } from "../../firebase";
 import { CSVLink } from "react-csv";
 import styles from "./hospital.module.css";
 
-function HospitalList() {
-  const [hospitals, setHospitals] = useState([]);
-  const { id } = useParams();
+interface Hospital {
+  id: string;
+  name: string;
+  address: string;
+  phone: string;
+  email: string;
+}
+
+function HospitalList(): JSX.Element {
+  const [hospitals, setHospitals] = useState<Hospital[]>([]);
+  const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
     const fetchHospitals = async () => {
@@ -20,7 +28,7 @@ function HospitalList() {
         const hospitalsData = hospitalsSnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
-        }));
+        })) as Hospital[];
 
         setHospitals(hospitalsData);
       } catch (error) {
@@ -42,6 +50,7 @@ function HospitalList() {
     name: hospital.name,
     address: hospital.address,
     phone: hospital.phone,
+    email: hospital.email,
   }));
 
   const handleEmailShare = () => {

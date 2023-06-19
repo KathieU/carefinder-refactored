@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent, ChangeEvent } from "react";
 import { auth } from "../../firebase";
 import { Link } from "react-router-dom";
 import styles from "./login.module.css";
 
-function Login() {
+function Login(): JSX.Element {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
     try {
       await auth.signInWithEmailAndPassword(email, password);
       // Handle successful login, e.g., redirect to a different page
     } catch (error) {
       console.error("Error logging in:", error);
-      setError("Errorlogging in. Please try again.");
+      setError("Error logging in. Please try again.");
     }
   };
 
@@ -39,7 +39,9 @@ function Login() {
                 type="email"
                 id="emailInput"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setEmail(e.target.value)
+                }
                 required
               />
             </div>
@@ -50,7 +52,9 @@ function Login() {
                 type="password"
                 id="passwordInput"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setPassword(e.target.value)
+                }
                 required
               />
             </div>

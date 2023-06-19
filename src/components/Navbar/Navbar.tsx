@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 
-function Navbar() {
+function Navbar(): JSX.Element {
   return (
     <nav>
       <h1 className={styles.title}>CareFinder</h1>
