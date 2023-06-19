@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { auth } from "../firebase";
-import Login from "../components/Login";
+import Login from "../components/Login/Login";
 
 // Mock the Firebase authentication methods
 jest.mock("../firebase", () => ({

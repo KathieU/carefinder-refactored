@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { firestore } from "../firebase";
-import LocationList from "../components/LocationList";
+import LocationList from "../components/LocationList/LocationList";
 
 // Mock the Firestore collection and query methods
 jest.mock("../firebase", () => ({

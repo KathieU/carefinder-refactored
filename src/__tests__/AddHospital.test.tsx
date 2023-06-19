@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { firestore } from "../firebase";
-import AddHospital from "../components/AddHospital";
+import AddHospital from "../components/AddHospital/AddHospital";
 
 jest.mock("../firebase", () => ({
   firestore: {

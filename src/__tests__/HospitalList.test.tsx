@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { CSVLink } from "react-csv";
-import HospitalList from "../components/HospitalList";
+import HospitalList from "../components/HospitalList/HospitalList";
 
 // Mock the CSVLink component
 jest.mock("react-csv", () => ({
