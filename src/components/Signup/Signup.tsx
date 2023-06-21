@@ -100,7 +100,7 @@ function Signup(): JSX.Element {
               <label>Password</label>
               <br />
               <input
-                placeholder="Enter Password"
+                placeholder="Password must be at least 6 characters"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
