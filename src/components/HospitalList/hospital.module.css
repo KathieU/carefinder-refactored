@@ -36,6 +36,11 @@
   text-decoration: none;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: #385cde;
+}
+
 .cardList {
   list-style-type: none;
   display: grid;

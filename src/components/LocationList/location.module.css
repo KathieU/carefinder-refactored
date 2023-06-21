@@ -44,8 +44,16 @@
   text-align: center;
 }
 
+.cardItem:hover {
+  background-color: #caced6;
+}
+
 .cardItem a {
   text-decoration: none;
   color: #333333;
   font-weight: 700;
+}
+
+.cardItem a:hover {
+  color: #ffffff;
 }

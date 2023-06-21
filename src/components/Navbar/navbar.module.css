@@ -52,7 +52,7 @@ nav {
 }
 
 .navLinks a:hover {
-  text-decoration: underline;
+  color: #caced6;
 }
 
 .navButton {
@@ -64,6 +64,10 @@ nav {
   border-radius: 12px;
   color: #ffffff;
   text-align: center;
+}
+
+.navButton:hover {
+  background-color: #385cde;
 }
 
 .navLinks .navButton {
