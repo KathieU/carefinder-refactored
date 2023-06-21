@@ -5,10 +5,16 @@ import doctorIcon from "./doctorIcon.jpg";
 import exportIcon from "./exportIcon.jpg";
 import shareIcon from "./shareIcon.jpg";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet-async";
 
 function Home(): JSX.Element {
   return (
     <div className={styles.home}>
+      <Helmet>
+        <title>Carefinder</title>
+        <meta name="description" content="Welcome to the Carefinder where you can find hospitals near you"/>
+        <link rel="canonical" href="/"/>
+      </Helmet>
       <div className={styles.body}>
         <div className={styles.details}>
           <h2>Find the nearest hospital to you and make an appointment</h2>

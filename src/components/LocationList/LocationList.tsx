@@ -2,6 +2,7 @@ import React, { useEffect, useState, ChangeEvent } from "react";
 import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
 import styles from "./location.module.css";
+import { Helmet } from "react-helmet-async";
 
 interface Location {
   id: string;
@@ -38,6 +39,11 @@ function LocationList(): JSX.Element {
 
   return (
     <div className={styles.location}>
+      <Helmet>
+        <title>Location list</title>
+        <meta name="description" content="Select your location on this page"/>
+        <link rel="canonical" href="/location/:id"/>
+      </Helmet>
       <h2>Select your location</h2>
       <input
         type="text"

@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./about.module.css";
+import { Helmet } from "react-helmet-async";
 
 function About(): JSX.Element {
   return (
     <div className={styles.about}>
+      <Helmet>
+        <title>About</title>
+        <meta name="description" content="Find out details about the Carefinder app on this page"/>
+        <link rel="canonical" href="/about"/>
+      </Helmet>
       <div className={styles.first}></div>
       <div className={styles.second}></div>
       <div className={styles.third}>

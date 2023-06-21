@@ -2,6 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { auth } from "../../firebase";
 import { Link } from "react-router-dom";
 import styles from "./login.module.css";
+import { Helmet } from "react-helmet-async";
 
 function Login(): JSX.Element {
   const [email, setEmail] = useState("");
@@ -21,6 +22,11 @@ function Login(): JSX.Element {
 
   return (
     <div className={styles.signup}>
+      <Helmet>
+        <title>Login</title>
+        <meta name="description" content="Login to the Carefinder app on this page"/>
+        <link rel="canonical" href="/login"/>
+      </Helmet>
       <div className={styles.signup1}>
         <h2>CareFinder</h2>
         <h3>Join Our Community</h3>

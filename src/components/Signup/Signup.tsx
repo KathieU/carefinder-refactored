@@ -4,6 +4,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import styles from "./signup.module.css";
 import googleIcon from "./googleIcon.jpg";
+import { Helmet } from "react-helmet-async";
 
 function Signup(): JSX.Element {
   const [name, setName] = useState("");
@@ -57,6 +58,11 @@ function Signup(): JSX.Element {
 
   return (
     <div className={styles.signup}>
+      <Helmet>
+        <title>Signup</title>
+        <meta name="description" content="Signup to the Carefinder app on this page"/>
+        <link rel="canonical" href="/signup"/>
+      </Helmet>
       <div className={styles.signup1}>
         <h2>CareFinder</h2>
         <h3>Join Our Community</h3>

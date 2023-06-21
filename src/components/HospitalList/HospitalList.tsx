@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { firestore } from "../../firebase";
 import { CSVLink } from "react-csv";
 import styles from "./hospital.module.css";
+import { Helmet } from "react-helmet-async";
 
 interface Hospital {
   id: string;
@@ -68,6 +69,11 @@ function HospitalList(): JSX.Element {
 
   return (
     <div className={styles.hospital}>
+      <Helmet>
+        <title>Hospital list</title>
+        <meta name="description" content="Find hospitals near you on this page"/>
+        <link rel="canonical" href="/location/:id"/>
+      </Helmet>
       <h2>Hospitals near you</h2>
 
       <ul className={styles.cardList}>

@@ -1,0 +1,5 @@
+https://carefinder-app.netlify.app/
+https://carefinder-app.netlify.app/about
+https://carefinder-app.netlify.app/location
+https://carefinder-app.netlify.app/login
+https://carefinder-app.netlify.app/signup

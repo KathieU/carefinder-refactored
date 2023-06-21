@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
 import styles from "./add.module.css";
+import { Helmet } from "react-helmet-async";
 
 interface Location {
   id: string;
@@ -109,7 +110,13 @@ function AddHospital(): JSX.Element {
   };
 
   return (
+    
     <div className={styles.add}>
+      <Helmet>
+        <title>Add Hospital</title>
+        <meta name="description" content="Add hospitals in your area and their details to the Carefinder app on this page"/>
+        <link rel="canonical" href="/login/add-hospital"/>
+      </Helmet>
       <h2>Add Hospital</h2>
       {successMessage && <p>{successMessage}</p>}
       {errorMessage && <p>{errorMessage}</p>}
