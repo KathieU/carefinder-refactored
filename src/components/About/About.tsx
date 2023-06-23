@@ -17,8 +17,7 @@ function About(): JSX.Element {
           Welcome to <span>CareFinder</span>
         </h2>
         <p>
-          Carefinder is a platform where users can search for hosiptals in their
-          areas, export hospital details for your records and enhance your
+          Carefinder is a platform where users can search for hosiptals in Lagos, export hospital details for your records and enhance your
           healthcare experience by connecting with others and sharing valuable
           resources.
         </p>

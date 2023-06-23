@@ -267,6 +267,10 @@
   letter-spacing: -0.011em;
 }
 
+.signupForm form button:hover {
+  background-color: #385cde;
+}
+
 .linkText {
   color: #ffffff;
   text-decoration: none;

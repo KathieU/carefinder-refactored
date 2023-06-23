@@ -62,3 +62,7 @@ form input {
   margin-top: 10px;
   font-weight: 700;
 }
+
+button:hover {
+  background-color: #385cde;
+}

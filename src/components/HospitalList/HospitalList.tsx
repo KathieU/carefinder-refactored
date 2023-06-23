@@ -81,11 +81,11 @@ function HospitalList(): JSX.Element {
           <li key={hospital.id} className={styles.cardItem}>
             <strong>{hospital.name}</strong>
             <br />
-            Address: {hospital.address}
+            <span>Address: {hospital.address}</span>
             <br />
-            Phone: {hospital.phone}
+            <span>Phone: {hospital.phone}</span>
             <br />
-            Email: {hospital.email}
+            <span>Email: {hospital.email}</span>
           </li>
         ))}
       </ul>

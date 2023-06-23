@@ -17,7 +17,7 @@ function Home(): JSX.Element {
       </Helmet>
       <div className={styles.body}>
         <div className={styles.details}>
-          <h2>Find the nearest hospital to you and make an appointment</h2>
+          <h2>Find the nearest hospital to you in Lagos and make an appointment</h2>
           <p>
             Discover Your Perfect Care: Find Your Hospital, Anytime, Anywhere!
           </p>
@@ -43,7 +43,7 @@ function Home(): JSX.Element {
 
           <p>
             Carefinder is a platform where users can search for hospitals in
-            their areas, export hospital details for their records, and enhance
+            Lagos, export hospital details for their records, and enhance
             their healthcare experience by connecting with others and sharing
             valuable resources.
           </p>
@@ -61,7 +61,7 @@ function Home(): JSX.Element {
           <div className={styles.hospitals}>
             <img src={hospitalIcon} alt="hospital icon" />
             <h6>Search Hospitals</h6>
-            <p>Effortlessly Find the Best Hospitals Near You</p>
+            <p>Effortlessly Find the Best Hospitals in Lagos</p>
           </div>
           <div className={styles.export}>
             <img src={exportIcon} alt="export icon" />

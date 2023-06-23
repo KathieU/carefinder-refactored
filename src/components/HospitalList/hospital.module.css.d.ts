@@ -3,6 +3,10 @@ declare const styles: {
     cardList: string;
     cardItem: string;
     csv: string;
+    name: string;
+    address: string;
+    phone: string;
+    email: string;
   };
   
   export default styles;
