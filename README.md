@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+**Carefinder** is a simple tool built with Typescript, React.js and Firebase that aims to help users find, export, and share hospitals in Lagos state.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Features**
 
-## Available Scripts
+**Hospital Search**: Carefinder allows users to search for hospitals within their region in Lagos. Users can select from a list of nearby cities to find hospitals in their area. The platform will provide a list of hospitals and their respective contact details, including address, phone number, and email.
 
-In the project directory, you can run:
+**Export Hospitals:** Carefinder allows users to export the list of hospitals to a CSV file, making it easy to save and share the information. 
 
-### `npm start`
+**Share Hospitals:** Carefinder also allows users to share the list of hospitals with others. Users can share the information via email.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**User Authentication:** Carefinder requires admin users to create an account to access the platform's admin features. This feature is implemented using Firebase's built-in authentication feature.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Markdown Support:** Carefinder allows admin users to write content, including hospital entries and corresponding details, with markdown. This feature makes it easy for users to format their content, add links, and insert images. The platform provides a simple text editor that supports markdown syntax.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Getting Started**
 
-### `npm run build`
+To run Carefinder locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository: git clone https://github.com/KathieU/carefinder.git
+2. Install dependencies: npm install
+3. Configure your backend technology (Firebase, Hasura, etc.) and set up the necessary credentials and configurations.
+4. Build the project: npm run build
+5. Start the local server: npm start
+   
+ 
+**Contributing**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We welcome contributions to Carefinder! If you'd like to contribute, please follow these guidelines:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: git checkout -b my-feature
+3. Make your changes and commit them: git commit -am 'Add new feature'
+4. Push the branch: git push origin my-feature
+4. Submit a pull request detailing your changes and any relevant information.
