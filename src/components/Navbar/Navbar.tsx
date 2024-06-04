@@ -5,7 +5,11 @@ import styles from "./navbar.module.css";
 function Navbar(): JSX.Element {
   return (
     <nav>
-      <h1 className={styles.title}>CareFinder</h1>
+      <Link to="/" className={styles.title}>
+      <h1 >CareFinder</h1>
+      </Link>
+      
+
       <div className={styles.navLinks}>
         <Link to="/" className={styles.homeLink}>
           Home

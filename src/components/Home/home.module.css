@@ -4,11 +4,10 @@
 .home {
   position: absolute;
   width: 100vw;
-  height: 947px;
-  left: 0px;
-  top: 104px;
+  /* height: 947px; */
+  height: 100vh;
+  top: 10vh;
   background: #e0e4ec;
-  padding-left: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,6 +99,13 @@
   color: #1e1e1e;
 }
 
+.details {
+  display: flex;
+}
+
+.details .body {
+  width: 10%;
+}
 .image {
   position: absolute;
   width: 816px;

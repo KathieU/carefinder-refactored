@@ -27,10 +27,12 @@ function Home(): JSX.Element {
           <i>Learn more</i>
         </div>
         <div className={styles.image}></div>
+        
       </div>
       <div className={styles.search}>
         <p>Find a hospital nearby</p>
       </div>
+      
 
       <div className={styles.about}>
         <div className={styles.first}></div>
