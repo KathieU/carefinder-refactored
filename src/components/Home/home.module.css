@@ -13,10 +13,23 @@
   justify-content: center;
 }
 
+.hero {
+  border: 2px solid red;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero .details {
+  width: 10%;
+  height: 100%;
+}
+
 .details h2 {
   position: absolute;
-  width: 588px;
-  height: 183px;
+  width: 45%;
+  height: 60%;
   left: 0px;
   top: 172px;
 
@@ -108,10 +121,11 @@
 }
 .image {
   position: absolute;
-  width: 816px;
-  height: 603px;
+  width: 50%;
+  height: 70%;
   left: 624px;
   top: 110px;
+  right: 0px;
 
   background: url(./appImage.jpg);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))

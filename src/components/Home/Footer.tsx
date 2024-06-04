@@ -6,11 +6,15 @@ function Footer(): JSX.Element {
     <footer className={styles.footer} data-testid="footer">
       <div className={styles.footer1} data-testid="footer1">
         <h5>CareFinder</h5>
-        <p>Plot 42, Akinza Street, Victoria island, Lagos +2349167351788</p>
+        <p>Plot 42, Akinza Street, Victoria island, 
+          <br/>Lagos, Nigeria
+          <br/>+2349167351788
+        </p>
       </div>
       <div className={styles.footer2} data-testid="footer2">
         <h5>About Us</h5>
-        <p>News & Media Contact Us</p>
+        <p>News & Media</p>
+        <p>Contact Us</p>
       </div>
       <div className={styles.footer3} data-testid="footer3">
         <h5>Quick Links</h5>

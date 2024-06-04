@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./home.module.css";
+// import styles from "./home.module.css";
+import styles from "./landing.module.css";
 import hospitalIcon from "./hospitalIcon.jpg";
 import doctorIcon from "./doctorIcon.jpg";
 import exportIcon from "./exportIcon.jpg";
@@ -15,7 +16,7 @@ function Home(): JSX.Element {
         <meta name="description" content="Welcome to the Carefinder where you can find hospitals near you"/>
         <link rel="canonical" href="/"/>
       </Helmet>
-      <div className={styles.body}>
+      <div className={styles.hero}>
         <div className={styles.details}>
           <h2>Find the nearest hospital to you in Lagos and make an appointment</h2>
           <p>
