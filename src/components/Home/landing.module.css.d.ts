@@ -1,6 +1,7 @@
 declare const styles: {
     home: string;
     hero: string;
+    hero1: string;
     details: string;
     image: string;
     about: string;

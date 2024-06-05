@@ -7,9 +7,8 @@ nav {
   z-index: 2;
   justify-content: space-between;
   align-items: center;
-  height: 13vh;
   width: 100vw;
-  padding: 10px;
+  padding: 1rem;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(14, 61, 183, 0.15);
 }
@@ -37,7 +36,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-right: 2vw;
+  margin-right: 4vw;
 }
 
 .navLinks a {

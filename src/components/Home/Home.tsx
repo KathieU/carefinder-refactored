@@ -17,22 +17,24 @@ function Home(): JSX.Element {
         <link rel="canonical" href="/"/>
       </Helmet>
       <div className={styles.hero}>
-        <div className={styles.details}>
-          <h2>Find the nearest hospital to you in Lagos and make an appointment</h2>
-          <p>
-            Discover Your Perfect Care: Find Your Hospital, Anytime, Anywhere!
-          </p>
-          <button>
-            <span>GET STARTED</span>
-          </button>
-          <i>Learn more</i>
+        <div className={styles.hero1}>
+          <div className={styles.details}>
+            <h2>Find the nearest hospital to you in Lagos and make an appointment</h2>
+            <p>
+              Discover Your Perfect Care: Find Your Hospital, Anytime, Anywhere!
+            </p>
+            <button>
+              <span>GET STARTED</span>
+            </button>
+            <i>Learn more</i>
+          </div>
+          <div className={styles.image}></div>
         </div>
-        <div className={styles.image}></div>
-        
+        <div className={styles.search}>
+          <p>Find a hospital nearby</p>
+        </div> 
       </div>
-      <div className={styles.search}>
-        <p>Find a hospital nearby</p>
-      </div>
+      
       
 
       <div className={styles.about}>

@@ -3,7 +3,7 @@
 footer {
   display: flex;
   justify-content: space-around;
-  /* padding: 21px 93px; */
+  padding: 2rem 0rem;
   background: #e0e4ec;
 }
 
