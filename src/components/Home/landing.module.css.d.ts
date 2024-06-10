@@ -5,6 +5,8 @@ declare const styles: {
     details: string;
     image: string;
     about: string;
+    about1: string;
+    aboutImage: string;
     first: string;
     second: string;
     third: string;

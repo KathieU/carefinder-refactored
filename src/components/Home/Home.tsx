@@ -21,12 +21,12 @@ function Home(): JSX.Element {
           <div className={styles.details}>
             <h2>Find the nearest hospital to you in Lagos and make an appointment</h2>
             <p>
-              Discover Your Perfect Care: Find Your Hospital, Anytime, Anywhere!
+              Discover Your Perfect Care: <br/>Find Your Hospital, Anytime, Anywhere!
             </p>
             <button>
               <span>GET STARTED</span>
             </button>
-            <i>Learn more</i>
+            <i>Learn more →</i>
           </div>
           <div className={styles.image}></div>
         </div>
@@ -34,27 +34,29 @@ function Home(): JSX.Element {
           <p>Find a hospital nearby</p>
         </div> 
       </div>
-      
-      
 
       <div className={styles.about}>
-        <div className={styles.first}></div>
-        <div className={styles.second}></div>
-        <div className={styles.third}>
-          <h2>
-            Welcome to <br />
-            <b>CareFinder</b>
-          </h2>
+        <div className={styles.about1}>
+          <div className={styles.aboutImage}>
+            <div className={styles.first}></div>
+            <div className={styles.second}></div>
+          </div>
+          <div className={styles.third}>
+            <h2>
+              Welcome to <br />
+              <b>CareFinder</b>
+            </h2>
 
-          <p>
-            Carefinder is a platform where users can search for hospitals in
-            Lagos, export hospital details for their records, and enhance
-            their healthcare experience by connecting with others and sharing
-            valuable resources.
-          </p>
-          <button>
-            <span>OUR SERVICES</span>
-          </button>
+            <p>
+              Carefinder is a platform where users can search for hospitals in
+              Lagos, export hospital details for their records, and enhance
+              their healthcare experience by connecting with others and sharing
+              valuable resources.
+            </p>
+            <button>
+              <span>OUR SERVICES</span>
+            </button>
+          </div>
         </div>
 
         <div className={styles.services}>

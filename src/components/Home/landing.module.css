@@ -8,15 +8,15 @@
 .hero {
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
   background: #e0e4ec;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  gap: 2rem;
 }
 
 .hero1 {
   display: flex;
   justify-content: space-between;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .details {
@@ -25,11 +25,11 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-left: 1rem;
 }
 
 .details h2 {
   font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 135%;
@@ -39,9 +39,8 @@
 
 .details p {
   font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.2rem;
   line-height: 135%;
   text-align: center;
   color: #000000;
@@ -50,13 +49,15 @@
 .details button {
   background: #08299b;
   border-radius: 12px;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
 }
 
 .details button span {
   font-family: "Inter";
-  font-style: normal;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.5rem;
   line-height: 150%;
   text-align: center;
   letter-spacing: -0.011em;
@@ -67,7 +68,7 @@
   font-family: "Inter";
   font-style: italic;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 150%;
   letter-spacing: -0.011em;
   color: #1e1e1e;
@@ -75,10 +76,274 @@
 }
 .image {
   width: 50%;
-  right: 0;
   background: url(./appImage.jpg) no-repeat;
   background-size: cover;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(12px 12px 20px rgba(14, 61, 183, 0.25));
   border-radius: 50px 0px 0px 50px;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search p {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #08299b;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about1 {
+  display: flex;
+  margin: 3rem 0rem;
+  gap: 2rem;
+}
+
+.aboutImage {
+  display: flex;
+  width: 60%;
+  gap: 1rem;
+}
+
+.about1 .first {
+  background: url(../About/about1.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  width: 45%;
+  margin-bottom: 3rem;
+}
+
+.about1 .second {
+  background: url(../About/about2.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  width: 45%;
+  margin-top: 3rem;
+}
+
+.about1 .third {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about1 .third h2 {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.about1 .third b {
+  color: #08299b;
+}
+
+.third button {
+  background: #08299b;
+  border-radius: 12px;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.third button span {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #ffffff;
+}
+
+.about1 .third p {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+.services {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.doctors {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+  gap: 1rem;
+  align-items: center;
+  background: #e0e4ec;
+  border-radius: 12px;
+}
+
+.doctors img {
+  border-radius: 50%;
+  padding: 1rem;
+  background: #08299b;
+}
+
+.doctors h6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.doctors p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  /* margin-left: 50px; */
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.hospitals {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+  gap: 1rem;
+  align-items: center;
+  background: #e0e4ec;
+  border-radius: 12px;
+}
+
+.hospitals img {
+  background: #08299b;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.hospitals h6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.hospitals p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.export {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+  gap: 1rem;
+  align-items: center;
+  background: #e0e4ec;
+  border-radius: 12px;
+}
+
+.export img {
+  background: #08299b;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.export h6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.export p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.share {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+  gap: 1rem;
+  align-items: center;
+  background: #e0e4ec;
+  border-radius: 12px;
+}
+
+.share img {
+  background: #08299b;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.share h6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.share p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
 }
