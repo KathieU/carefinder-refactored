@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
-import About from "./components/About/About";
 import LocationList from "./components/LocationList/LocationList";
 import HospitalList from "./components/HospitalList/HospitalList";
 import Login from "./components/Login/Login";
@@ -18,7 +17,6 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/location" element={<LocationList />} />
           <Route path="/location/:id" element={<HospitalList />} />
           <Route path="/login" element={<Login />} />

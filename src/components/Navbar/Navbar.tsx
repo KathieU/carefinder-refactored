@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 
 function Navbar(): JSX.Element {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
+    e.preventDefault();
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <nav>
       <Link to="/" className={styles.title}>
@@ -15,9 +22,17 @@ function Navbar(): JSX.Element {
           Home
         </Link>
 
-        <Link to="/about" className={styles.aboutLink}>
+        <a
+          href="#about-section"
+          onClick={(e) => scrollToSection(e, "about-section")}
+          className={styles.aboutLink}
+        >
           About
-        </Link>
+        </a>
+
+        {/* <Link to="#about-section" className={styles.aboutLink}>
+          About
+        </Link> */}
 
         <Link to="/location" className={styles.findLink}>
           Find Hospital

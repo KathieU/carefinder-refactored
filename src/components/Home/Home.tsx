@@ -35,7 +35,7 @@ function Home(): JSX.Element {
         </div> 
       </div>
 
-      <div className={styles.about}>
+      <div className={styles.about} id="about-section">
         <div className={styles.about1}>
           <div className={styles.aboutImage}>
             <div className={styles.first}></div>

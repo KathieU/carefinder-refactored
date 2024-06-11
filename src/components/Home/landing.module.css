@@ -118,7 +118,7 @@
 }
 
 .about1 .first {
-  background: url(../About/about1.jpg) no-repeat;
+  background: url(./about1.jpg) no-repeat;
   background-size: cover;
   border-radius: 20px;
   width: 45%;
@@ -126,7 +126,7 @@
 }
 
 .about1 .second {
-  background: url(../About/about2.jpg) no-repeat;
+  background: url(./about2.jpg) no-repeat;
   background-size: cover;
   border-radius: 20px;
   width: 45%;
@@ -144,8 +144,8 @@
 .about1 .third h2 {
   font-family: "DM Sans";
   font-weight: 500;
-  font-size: 45px;
-  line-height: 120%;
+  font-size: 2rem;
+  line-height: 140%;
   text-align: center;
   letter-spacing: -0.011em;
   color: #000000;
@@ -153,6 +153,7 @@
 
 .about1 .third b {
   color: #08299b;
+  font-size: 3rem;
 }
 
 .third button {
