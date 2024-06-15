@@ -120,7 +120,7 @@ function AddHospital(): JSX.Element {
       <h2>Add Hospital</h2>
       {successMessage && <p>{successMessage}</p>}
       {errorMessage && <p>{errorMessage}</p>}
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className={styles.addHospitalForm}>
         <div className={styles.selectLocation}>
           <label htmlFor="location">Location:</label>
           <select

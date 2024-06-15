@@ -5,24 +5,13 @@ footer {
   justify-content: space-around;
   padding: 2rem 0rem;
   background: #e0e4ec;
+  font-family: "DM Sans";
+  font-weight: 500;
 }
-
 footer h5 {
   color: #08299b;
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
   font-size: 30px;
   line-height: 150%;
   letter-spacing: -0.011em;
   margin-bottom: 1rem;
-}
-
-.footer1,
-.footer2,
-.footer3 {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  /* width: 30%; */
 }

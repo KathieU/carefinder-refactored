@@ -11,20 +11,15 @@ nav {
   padding: 1rem;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(14, 61, 183, 0.15);
+  font-family: "DM Sans";
 }
 
 .title {
   font-size: 1.5rem;
   margin-left: 5vw;
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 700;
   line-height: 150%;
-  letter-spacing: -0.011em;
   color: #08299b;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   text-decoration: none;
 }
 
@@ -39,23 +34,28 @@ nav {
   margin-right: 4vw;
 }
 
-.navLinks a {
+.navLinks a,
+.aboutLink {
   text-decoration: none;
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 500;
   font-size: 1.3rem;
   line-height: 150%;
-  letter-spacing: -0.011em;
   color: #000000;
-  flex: none;
-  flex-grow: 0;
 }
 
 .navLinks a:hover {
   color: #454646;
 }
 
+.aboutLink:hover {
+  color: #454646;
+  background-color: transparent;
+}
+
+.aboutLink {
+  border: none;
+  background-color: transparent;
+}
 .navButton {
   background: #08299b;
   border-radius: 12px;

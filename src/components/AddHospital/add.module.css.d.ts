@@ -1,20 +1,4 @@
-// styles.d.ts
-
-// declare module '*.module.css' {
-//     interface ClassNames {
-//       add: string;
-//       h2: string;
-//       label: string;
-//       input: string;
-//       select: string;
-//       button: string;
-//     }
-  
-//     const classNames: ClassNames;
-//     export default classNames;
-//   }
-  
-  declare const styles: {
+declare const styles: {
     add: string;
       h2: string;
       label: string;
@@ -26,6 +10,7 @@
       selectEmail: string;
       button: string;
       description : string;
+      addHospitalForm: string;
   };
   
   export default styles;

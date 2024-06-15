@@ -26,10 +26,10 @@
   align-items: center;
   gap: 1rem;
   margin-left: 1rem;
+  font-family: "Inter";
 }
 
 .details h2 {
-  font-family: "Inter";
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 135%;
@@ -38,12 +38,10 @@
 }
 
 .details p {
-  font-family: "Inter";
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 135%;
   text-align: center;
-  color: #000000;
 }
 
 .details button {
@@ -55,22 +53,18 @@
 }
 
 .details button span {
-  font-family: "Inter";
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 150%;
   text-align: center;
-  letter-spacing: -0.011em;
   color: #ffffff;
 }
 
 .details i {
-  font-family: "Inter";
   font-style: italic;
   font-weight: 500;
   font-size: 1rem;
   line-height: 150%;
-  letter-spacing: -0.011em;
   color: #1e1e1e;
   display: block;
 }
@@ -87,15 +81,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  font-family: "Inter";
 }
 
 .search p {
-  font-family: "Inter";
   font-weight: 500;
   font-size: 25px;
   line-height: 150%;
   text-align: center;
-  letter-spacing: -0.011em;
   color: #08299b;
 }
 
@@ -103,6 +96,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  font-family: "DM Sans";
 }
 
 .about1 {
@@ -142,13 +136,10 @@
 }
 
 .about1 .third h2 {
-  font-family: "DM Sans";
   font-weight: 500;
   font-size: 2rem;
   line-height: 140%;
   text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
 }
 
 .about1 .third b {
@@ -164,28 +155,44 @@
 }
 
 .third button span {
-  font-family: "DM Sans";
   font-weight: 700;
   font-size: 25px;
   line-height: 150%;
   text-align: center;
-  letter-spacing: -0.011em;
   color: #ffffff;
 }
 
 .about1 .third p {
-  font-family: "DM Sans";
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 140%;
   text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
 }
 .services {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
+  font-family: "DM Sans";
+}
+
+.services img {
+  border-radius: 50%;
+  padding: 1rem;
+  background: #08299b;
+}
+
+.services h6 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.services p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
 }
 
 .doctors {
@@ -199,36 +206,6 @@
   background: #e0e4ec;
   border-radius: 12px;
 }
-
-.doctors img {
-  border-radius: 50%;
-  padding: 1rem;
-  background: #08299b;
-}
-
-.doctors h6 {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
-}
-
-.doctors p {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 150%;
-  /* margin-left: 50px; */
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
-}
-
 .hospitals {
   width: 22%;
   display: flex;
@@ -240,35 +217,6 @@
   background: #e0e4ec;
   border-radius: 12px;
 }
-
-.hospitals img {
-  background: #08299b;
-  border-radius: 50%;
-  padding: 1rem;
-}
-
-.hospitals h6 {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
-}
-
-.hospitals p {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
-}
-
 .export {
   width: 22%;
   display: flex;
@@ -281,34 +229,6 @@
   border-radius: 12px;
 }
 
-.export img {
-  background: #08299b;
-  border-radius: 50%;
-  padding: 1rem;
-}
-
-.export h6 {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
-}
-
-.export p {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
-}
-
 .share {
   width: 22%;
   display: flex;
@@ -319,32 +239,4 @@
   align-items: center;
   background: #e0e4ec;
   border-radius: 12px;
-}
-
-.share img {
-  background: #08299b;
-  border-radius: 50%;
-  padding: 1rem;
-}
-
-.share h6 {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
-}
-
-.share p {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.011em;
-  color: #000000;
 }

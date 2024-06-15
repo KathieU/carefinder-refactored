@@ -1,5 +1,5 @@
-import React from "react";
-// import styles from "./home.module.css";
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import styles from "./landing.module.css";
 import hospitalIcon from "./hospitalIcon.jpg";
 import doctorIcon from "./doctorIcon.jpg";
@@ -9,6 +9,14 @@ import Footer from "./Footer";
 import { Helmet } from "react-helmet-async";
 
 function Home(): JSX.Element {
+  const location = useLocation();
+  const aboutRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (location.state?.scrollToAbout) {
+      aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
   return (
     <div className={styles.home}>
       <Helmet>
@@ -35,7 +43,7 @@ function Home(): JSX.Element {
         </div> 
       </div>
 
-      <div className={styles.about} id="about-section">
+      <div ref={aboutRef} className={styles.about} id="about-section">
         <div className={styles.about1}>
           <div className={styles.aboutImage}>
             <div className={styles.first}></div>

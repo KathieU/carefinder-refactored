@@ -39,7 +39,8 @@ function Login(): JSX.Element {
           <p>Login using correct details</p>
           <form onSubmit={handleLogin}>
             <div className={styles.email}>
-              <label htmlFor="emailInput">Email Address</label>
+              <label htmlFor="emailInput">Email Address</label><br/>
+            
               <input
                 placeholder="Enter Email Address"
                 type="email"
@@ -52,7 +53,7 @@ function Login(): JSX.Element {
               />
             </div>
             <div className={styles.password}>
-              <label htmlFor="passwordInput">Password</label>
+              <label htmlFor="passwordInput">Password</label><br/>
               <input
                 placeholder="Enter Password"
                 type="password"
